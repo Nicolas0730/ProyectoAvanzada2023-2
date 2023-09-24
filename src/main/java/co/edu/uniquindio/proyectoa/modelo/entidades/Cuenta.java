@@ -1,13 +1,11 @@
 package co.edu.uniquindio.proyectoa.modelo.entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.repository.cdi.Eager;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -25,6 +23,10 @@ public class Cuenta implements Serializable {
 
     private String correo;
     private String contrasenia;
+
+    @OneToMany(mappedBy = "codigoCuenta")
+    private List<Mensaje> listaMensajes;
+
 
 
 }

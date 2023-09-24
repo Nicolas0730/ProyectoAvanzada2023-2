@@ -7,6 +7,7 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Getter
@@ -33,4 +34,6 @@ public class PQRS implements Serializable {
     @Enumerated(EnumType.STRING)
     private EstadoPQRS codigoPQRS;
 
+    @OneToMany(mappedBy = "codigoPQRS")
+    private List<Mensaje> listaMensaje;
 }

@@ -7,6 +7,7 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -31,4 +32,9 @@ public class Paciente implements Serializable {
     @Enumerated(EnumType.STRING)
     private TipoSangre codigoTipoSangre;
 
+    @OneToMany(mappedBy = "codigoPaciente")
+    private List<Cita> listaCitas;
+
+    @OneToMany(mappedBy = "codigoPaciente")
+    private List<CalificacionMedico> calificacionMedico;
 }

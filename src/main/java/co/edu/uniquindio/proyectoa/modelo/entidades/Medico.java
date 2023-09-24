@@ -23,5 +23,15 @@ public class Medico extends Usuario implements Serializable {
     @Enumerated(EnumType.STRING)
     public List<Especialidad> codigo_especialidad;
 
+    @OneToMany(mappedBy = "codigoMedico")
+    private List<Horario> horarioMedico;
 
+    @OneToMany(mappedBy = "codigoMedico")
+    private List<DiaLibre> diaLibre;
+
+    @OneToMany(mappedBy = "codigoMedico")
+    private List<Cita> citaMedico;
+
+    @OneToMany(mappedBy = "codigoMedico")
+    private List<CalificacionMedico> calificacionMedico;
 }
