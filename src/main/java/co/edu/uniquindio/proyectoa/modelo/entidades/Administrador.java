@@ -22,6 +22,9 @@ public class Administrador extends Cuenta implements Serializable {
     @EqualsAndHashCode.Include
     private int id;
 
-    //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
+    //git remote add origin git@github.com:SU_USERNAME/NOMBRE_PROYECTO.git
+    //git remote add origin git@github.com:Nicolas0730/ProyectoAvanzada2023-2.git
+    //git push --set-upstream origin ramaTrabajo
+
 
 }
