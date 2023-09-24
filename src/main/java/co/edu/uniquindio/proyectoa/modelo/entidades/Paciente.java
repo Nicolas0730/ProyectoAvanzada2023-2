@@ -16,7 +16,8 @@ import java.util.Objects;
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
-public class Paciente implements Serializable {
+@DiscriminatorValue("Paciente")
+public class Paciente extends Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +25,8 @@ public class Paciente implements Serializable {
     private int codigo;
 
     private Date fechaNacimiento;
+
+    @Column(unique = true,nullable = false,length = 40)
     private String  alergias;
 
     @Enumerated(EnumType.STRING)
@@ -33,8 +36,10 @@ public class Paciente implements Serializable {
     private TipoSangre codigoTipoSangre;
 
     @OneToMany(mappedBy = "codigoPaciente")
+    @JoinColumn(unique = true,nullable = false)
     private List<Cita> listaCitas;
 
     @OneToMany(mappedBy = "codigoPaciente")
+    @JoinColumn(unique = true,nullable = false)
     private List<CalificacionMedico> calificacionMedico;
 }
