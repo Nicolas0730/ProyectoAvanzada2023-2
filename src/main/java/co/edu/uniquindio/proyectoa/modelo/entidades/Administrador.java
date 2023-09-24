@@ -1,32 +1,27 @@
 package co.edu.uniquindio.proyectoa.modelo.entidades;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.*;
 
 import java.io.Serializable;
 
 @Entity
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@NoArgsConstructor
+
 public class Administrador extends Cuenta implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private int id;
 
-    public int getId() {
-        return id;
-    }
+    //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
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Administrador that = (Administrador) o;
-
-        return id == that.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return id;
-    }
 }
