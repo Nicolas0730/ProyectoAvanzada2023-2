@@ -1,14 +1,13 @@
 package co.edu.uniquindio.proyectoa.modelo.entidades;
 
-import co.edu.uniquindio.proyectoa.enumeraciones.EPS;
-import co.edu.uniquindio.proyectoa.enumeraciones.TipoSangre;
+import co.edu.uniquindio.proyectoa.modelo.entidades.enumeraciones.EPS;
+import co.edu.uniquindio.proyectoa.modelo.entidades.enumeraciones.TipoSangre;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Getter

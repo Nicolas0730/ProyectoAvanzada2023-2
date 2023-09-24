@@ -1,7 +1,7 @@
 package co.edu.uniquindio.proyectoa.modelo.entidades;
 
-import co.edu.uniquindio.proyectoa.enumeraciones.Estado;
-import co.edu.uniquindio.proyectoa.enumeraciones.HistorialAsistencia;
+import co.edu.uniquindio.proyectoa.modelo.entidades.enumeraciones.Estado;
+import co.edu.uniquindio.proyectoa.modelo.entidades.enumeraciones.HistorialAsistencia;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;

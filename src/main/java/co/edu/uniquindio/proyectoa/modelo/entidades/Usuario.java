@@ -1,12 +1,10 @@
 package co.edu.uniquindio.proyectoa.modelo.entidades;
 
-import co.edu.uniquindio.proyectoa.enumeraciones.Ciudad;
+import co.edu.uniquindio.proyectoa.modelo.entidades.enumeraciones.Ciudad;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.validator.constraints.URL;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 @NoArgsConstructor
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)

@@ -1,7 +1,7 @@
 package co.edu.uniquindio.proyectoa.modelo.entidades;
 
-import co.edu.uniquindio.proyectoa.enumeraciones.EstadoPQRS;
-import co.edu.uniquindio.proyectoa.enumeraciones.TipoPQRS;
+import co.edu.uniquindio.proyectoa.modelo.entidades.enumeraciones.EstadoPQRS;
+import co.edu.uniquindio.proyectoa.modelo.entidades.enumeraciones.TipoPQRS;
 import jakarta.persistence.*;
 import lombok.*;
 

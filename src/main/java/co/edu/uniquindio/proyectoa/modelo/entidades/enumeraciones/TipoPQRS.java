@@ -1,4 +1,4 @@
-package co.edu.uniquindio.proyectoa.enumeraciones;
+package co.edu.uniquindio.proyectoa.modelo.entidades.enumeraciones;
 
 
 import jakarta.persistence.Id;

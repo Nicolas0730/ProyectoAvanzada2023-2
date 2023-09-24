@@ -1,6 +1,6 @@
 package co.edu.uniquindio.proyectoa.modelo.entidades;
 
-import co.edu.uniquindio.proyectoa.enumeraciones.Especialidad;
+import co.edu.uniquindio.proyectoa.modelo.entidades.enumeraciones.Especialidad;
 import jakarta.persistence.*;
 import lombok.*;
 
