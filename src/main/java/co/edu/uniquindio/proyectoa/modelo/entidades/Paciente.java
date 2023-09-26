@@ -13,19 +13,12 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
-@DiscriminatorValue("Paciente")
 public class Paciente extends Usuario implements Serializable {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Include
-    private int codigo;
 
     private Date fechaNacimiento;
 
-    @Column(unique = true,nullable = false,length = 40)
+    @Column(nullable = false,length = 40)
     private String  alergias;
 
     @Enumerated(EnumType.STRING)
@@ -35,10 +28,8 @@ public class Paciente extends Usuario implements Serializable {
     private TipoSangre codigoTipoSangre;
 
     @OneToMany(mappedBy = "codigoPaciente")
-    @JoinColumn(unique = true,nullable = false)
     private List<Cita> listaCitas;
 
     @OneToMany(mappedBy = "codigoPaciente")
-    @JoinColumn(unique = true,nullable = false)
     private List<CalificacionMedico> calificacionMedico;
 }

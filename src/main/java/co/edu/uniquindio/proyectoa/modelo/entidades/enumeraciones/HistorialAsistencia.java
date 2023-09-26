@@ -4,6 +4,5 @@ import jakarta.persistence.Id;
 
 public enum HistorialAsistencia {
 
-    @Id
     codigo, ASISTENCIA
 }

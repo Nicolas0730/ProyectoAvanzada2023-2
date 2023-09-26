@@ -23,39 +23,37 @@ public class Cita implements Serializable {
     @Column(unique = true,nullable = false,updatable = false)
     private int codigo;
 
-    @Column(unique = false,nullable = false)
+    @Column(nullable = false)
     @DateTimeFormat
     private LocalDateTime fechaCreacion;
 
-    @Column(unique = false,nullable = false)
+    @Column(nullable = false)
     @DateTimeFormat
     private LocalDateTime fechaCita;
 
-    @Column(unique = false,nullable = true,updatable = false)
+    @Column(updatable = false)
     private String motivo;
 
     @ManyToOne
-    @JoinColumn(unique = true,nullable = false)
+    @JoinColumn(nullable = false)
     private Paciente codigoPaciente;
 
     @ManyToOne
-    @JoinColumn(unique = true,nullable = false)
+    @JoinColumn(nullable = false)
     private Medico codigoMedico;
 
-    @Enumerated(EnumType.STRING)
-    @JoinColumn(unique = true,nullable = false)
+    @Column(nullable = false)
     private HistorialAsistencia codigoHistorial;
 
     @Enumerated(EnumType.STRING)
-    @JoinColumn(unique = true,nullable = false)
+    @Column(nullable = false)
     private Estado estadoCita;
 
     @OneToOne
-    @JoinColumn(unique = true,nullable = false)
+    @JoinColumn(nullable = false)
     private DetalleCita detalleCita;
 
     @OneToMany(mappedBy = "codigoCita")
-    @JoinColumn(unique = true,nullable = false)
     private List<PQRS> listaPqrs;
 
 

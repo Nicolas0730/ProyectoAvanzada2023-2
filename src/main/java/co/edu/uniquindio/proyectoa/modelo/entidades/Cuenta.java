@@ -25,11 +25,10 @@ public class Cuenta implements Serializable {
     @Email
     private String correo;
 
-    @Column(unique = true,nullable = false,length = 20)
+    @Column(nullable = false,length = 20)
     private String contrasenia;
 
     @OneToMany(mappedBy = "codigoCuenta")
-    @JoinColumn(unique = true,nullable = false)
     private List<Mensaje> listaMensajes;
 
 

@@ -4,6 +4,5 @@ import jakarta.persistence.Id;
 
 public enum EstadoPQRS {
 
-    @Id
     codigo, ESTADO
 }

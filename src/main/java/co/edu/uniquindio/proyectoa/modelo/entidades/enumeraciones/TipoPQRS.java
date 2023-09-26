@@ -5,6 +5,6 @@ import jakarta.persistence.Id;
 
 public enum TipoPQRS {
 
-    @Id
+
     codigo, TIPO
 }

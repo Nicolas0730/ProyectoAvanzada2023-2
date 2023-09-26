@@ -1,4 +1,4 @@
-package co.edu.uniquindio.proyectoa.servicios;
+package co.edu.uniquindio.proyectoa.servicios.interfaces;
 
 import co.edu.uniquindio.proyectoa.dto.InfoPQRSDTO;
 import co.edu.uniquindio.proyectoa.dto.admin.CitaDTOAdmin;
@@ -10,11 +10,11 @@ import co.edu.uniquindio.proyectoa.dto.medico.MedicoDTO;
 import java.util.List;
 
 public interface AdministradorServicio {
-    String crearMedico(MedicoDTO medico) throws Exception;
+    int crearMedico(MedicoDTO medico) throws Exception;
 
-    String actualizarMedico(int codigo, MedicoDTO medico) throws Exception;
+    int actualizarMedico(int codigo, MedicoDTO medico) throws Exception;
 
-    String eliminarMedico(int codigo) throws Exception;
+    void eliminarMedico(int codigo) throws Exception;
 
     List<MedicoDTOAdmin> listarMedicos() throws Exception;
 

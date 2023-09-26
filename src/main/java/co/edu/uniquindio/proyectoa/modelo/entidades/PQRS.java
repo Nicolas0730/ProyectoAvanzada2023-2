@@ -23,10 +23,10 @@ public class PQRS implements Serializable {
     @Column(unique = true,nullable = false,updatable = false)
     private int codigo;
 
-    @Column(unique = true,nullable = false)
+    @Column(nullable = false)
     private LocalDateTime fechaCreacion;
 
-    @Column(unique = true,nullable = false,length = 300)
+    @Column(nullable = false,length = 300)
     private String motivo;
 
     @Enumerated(EnumType.STRING)
@@ -40,6 +40,5 @@ public class PQRS implements Serializable {
     private EstadoPQRS codigoPQRS;
 
     @OneToMany(mappedBy = "codigoPQRS")
-    @JoinColumn(unique = true,nullable = false)
     private List<Mensaje> listaMensaje;
 }

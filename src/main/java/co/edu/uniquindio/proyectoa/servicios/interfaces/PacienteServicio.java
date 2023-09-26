@@ -1,4 +1,4 @@
-package co.edu.uniquindio.proyectoa.servicios;
+package co.edu.uniquindio.proyectoa.servicios.interfaces;
 
 import co.edu.uniquindio.proyectoa.dto.CalificacionDTO;
 

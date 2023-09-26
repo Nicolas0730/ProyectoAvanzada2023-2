@@ -19,11 +19,11 @@ public class DetalleCita implements Serializable {
     @Column(unique = true,nullable = false,updatable = false)
     private int codigo;
 
-    @Column(unique = false,nullable = false)
+    @Column(nullable = false)
     private String diagnostico;
-    @Column(unique = false,nullable = false)
+    @Column(nullable = false)
     private String tratamiento;
-    @Column(unique = false,nullable = false)
+    @Column(nullable = false)
     private String observaciones;
 
     @OneToOne

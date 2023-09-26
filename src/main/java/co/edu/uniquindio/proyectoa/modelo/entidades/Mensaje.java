@@ -27,15 +27,15 @@ public class Mensaje implements Serializable {
     private String mensaje;
 
     @ManyToOne
-    @JoinColumn(unique = true,nullable = false)
+    @JoinColumn(nullable = false)
     private PQRS codigoPQRS;
 
     @ManyToOne
-    @JoinColumn(unique = true,nullable = false)
+    @JoinColumn(nullable = false)
     private Cuenta codigoCuenta;
 
     @OneToOne
-    @JoinColumn(unique = true,nullable = false)
+    @JoinColumn(nullable = false)
     private Mensaje codigoMensaje;
 
 }

@@ -21,15 +21,15 @@ public class CalificacionMedico implements Serializable {
     private int codigo;
 
     @Enumerated(EnumType.ORDINAL)
-    @JoinColumn(unique = true,nullable = false)
+    @JoinColumn(nullable = false)
     private Calificacion calificacionMedico;
 
     @ManyToOne
-    @JoinColumn(unique = true,nullable = false)
+    @JoinColumn(nullable = false)
     private Paciente codigoPaciente;
 
     @ManyToOne
-    @JoinColumn(unique = true,nullable = false)
+    @JoinColumn(nullable = false)
     private Medico codigoMedico;
 
 }

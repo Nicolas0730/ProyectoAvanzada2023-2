@@ -4,6 +4,12 @@ import jakarta.persistence.Id;
 
 public enum Ciudad {
 
-    @Id
-    id, NOMBRE
+    ARMENIA("Armenia"),
+    PEREIRA("Pereira"),
+    CALARCA("Calarcá"),
+    SANTAROSA("Santa Rosa");
+
+    private String nombre;
+
+    Ciudad(String nombre) { this.nombre=nombre;}
 }

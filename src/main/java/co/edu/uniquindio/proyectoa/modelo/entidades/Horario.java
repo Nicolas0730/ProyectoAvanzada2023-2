@@ -21,19 +21,19 @@ public class Horario implements Serializable {
     @Column(unique = true,nullable = false,updatable = false)
     private int codigo;
 
-    @Column(unique = false,nullable = false,length = 20,updatable = false)
+    @Column(nullable = false,length = 20,updatable = false)
     private String dia;
 
-    @Column(unique = false,nullable = false)
+    @Column(nullable = false)
     @DateTimeFormat
     private LocalDateTime horaInicio;
 
-    @Column(unique = false,nullable = false)
+    @Column(nullable = false)
     @DateTimeFormat
     private LocalDateTime horaFin;
 
     @ManyToOne
-    @JoinColumn(unique = true,nullable = false)
+    @JoinColumn(nullable = false)
     private Medico codigoMedico;
 
 
